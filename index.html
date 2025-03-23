@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+    <title>SplitYourBill</title>
+    <link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+    <div class="container">
+        <h2>SplitYourBill</h2>
+        <label for="participant-name">Nama: </label>
+        <input type="text" id="participant-name" placeholder="Nama">
+        <button onclick="addParticipant()">✚</button>
+        <div id="participants"></div>
+        <hr>
+
+        <h3>Pesanan</h3>
+        <input type="text" id="menu-name" placeholder="Nama Menu">
+        <input type="number" id="quantity" placeholder="Jumlah">
+        <input type="number" id="price" placeholder="Harga per Porsi">
+        <div id="participant-select"></div>
+        <button onclick="addOrder()">✚</button>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Menu</th>
+                    <th>Jumlah</th>
+                    <th>Harga per Porsi</th>
+                    <th>Total</th>
+                    <th>Nama</th>
+                    <th class="no-print">Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="order-list"></tbody>
+        </table>
+        <hr>
+
+        <label for="tax">Pajak (%): </label>
+        <input type="number" id="tax" placeholder="Pajak">
+        <label for="service">Biaya Layanan (%): </label>
+        <input type="number" id="service" placeholder="Biaya Layanan">
+        <label for="discount">Diskon (%): </label>
+        <input type="number" id="discount" placeholder="Diskon">
+        <button onclick="calculateSplit()">SplitYourBill</button>
+
+        <div class="split-results" id="split-results"></div>
+        <button class="no-print" onclick="printReceipt()">Print</button>
+    </div>
+    <script src="assets/app.js"></script>
+</body>
+</html>
