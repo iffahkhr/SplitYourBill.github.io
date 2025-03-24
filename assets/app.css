@@ -119,3 +119,17 @@ th {
         display: none;
     }
 }
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #e69316ee;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    margin: 0;
+}
