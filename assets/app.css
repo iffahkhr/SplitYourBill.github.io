@@ -1,23 +1,30 @@
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(180deg, rgba(249, 250, 241, 0.943), #e69316ee);
+    background: linear-gradient(180deg, #8a2be2, #ff69b4);
     text-align: center;
     padding: 20px;
     margin: 0;
     min-height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
-    max-width: 800px;
-    margin: auto;
-    background: #fff;
+    width: 80%; 
+    max-width: 1200px;
+    margin: 20px auto; 
+    background: white;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+
 h2 {
-    color: #ff7f00;
+    color: #4b0082;
+    font-weight: bold;
+    text-align: center;
 }
 
 input, button, select {
@@ -25,18 +32,28 @@ input, button, select {
     margin: 5px;
     border-radius: 5px;
     border: 1px solid #ddd;
+    font-size: 16px;
 }
 
 button {
-    background-color: #ff7f00;
+    background-color: #4b0082;
     color: white;
     border: none;
     cursor: pointer;
     transition: 0.3s;
+    font-weight: bold;
+    border-radius: 25px;
+    padding: 12px 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 button:hover {
-    background-color: #c28f18;
+    background-color: #6a0dad;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: scale(0.95);
 }
 
 table {
@@ -47,27 +64,29 @@ table {
 
 th, td {
     border: 1px solid #ddd;
-    padding: 10px;
-    text-align: left;
+    padding: 12px;
+    text-align: center;
 }
 
 #tax, #service, #discount {
-    width: 50%; 
-    max-width: 100px; 
+    width: 20%; 
+    max-width: 150px; 
     display: inline-block; 
     text-align: right; 
 }
 
 th {
-    background-color: #ff7f00;
+    background-color: #4b0082;
+    color: white;
 }
 
 .split-results {
     margin-top: 20px;
     text-align: left;
-    background: #ffdfbe;
-    padding: 10px;
+    background: #d8bfd8;
+    padding: 15px;
     border-radius: 10px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
 }
 
 .split-results h3, 
@@ -86,7 +105,7 @@ th {
 
 @media print {
     .split-results {
-        background: #ffdfbe;
+        background: white;
         padding: 20px;
         border-radius: 10px;
         width: 80%;
@@ -95,5 +114,8 @@ th {
     }
     h2 {
         text-align: center;
+    }
+    .no-print {
+        display: none;
     }
 }
