@@ -140,10 +140,15 @@ function printReceipt() {
 
 function openPopup() {
     document.getElementById("popup").style.display = "block";
-    document.getElementById("popup-overlay").style.display = "block";
 }
 
 function closePopup() {
     document.getElementById("popup").style.display = "none";
-    document.getElementById("popup-overlay").style.display = "none";
+}
+
+window.onclick = function(event) {
+    let popup = document.getElementById("popup");
+    if (event.target == popup) {
+        popup.style.display = "none";
+    }
 }
