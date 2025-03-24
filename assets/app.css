@@ -130,14 +130,14 @@ footer {
     width: 100%;
 }
 
-.about-us {
+.tentang-kami {
     display: flex;
     justify-content: center;
     margin-top: auto;
     padding-bottom: 10px;
 }
 
-.about-us button {
+.tentang-kami button {
     background-color: #ffffff;
     color: #4b0082;
     padding: 10px 20px;
@@ -148,7 +148,7 @@ footer {
     transition: 0.3s;
 }
 
-.about-us button:hover {
+.tentang-kami button:hover {
     background-color: #6a0dad;
     color: white;
 }
