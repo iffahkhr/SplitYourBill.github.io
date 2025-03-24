@@ -47,9 +47,27 @@
         <div class="split-results" id="split-results"></div>
         <button class="no-print" onclick="printReceipt()">Print</button>
     </div>
-    <script src="assets/app.js"></script>
+
     <footer>
-        <p>Oleh Kelompok 2. Anggota: Dhea, Diana, Elia, Iffah, Sitin.</p>
+        <div class="about-us">
+            <button onclick="openPopup()">About Us</button>
+        </div>
     </footer>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Our Team</h2>
+            <ul>
+                <li>Dhea Cahya Purnama (22/504752/SV/21694)</li>
+                <li>Diana Jasmine Salsabila (22/492539/SV/20540) </li>
+                <li>Elia Sofiana (22/493013/SV/20648)</li>
+                <li>Iffah Khoirul Janah (22/497220/SV/21105)</li>
+                <li>Siti Nur Aini (22/505651/SV/21859)</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="assets/app.js"></script>
 </body>
 </html>
