@@ -88,7 +88,7 @@ function calculateSplit() {
         });
     });
 
-    let output = "<h3>Hasil Pembagian</h3>";
+    document.getElementById("split-results").innerHTML += `<h3>Hasil Pembagian</h3>`
 
     for (let participant in results) {
         let subtotal = results[participant].reduce((sum, item) => sum + item.total, 0);
@@ -97,21 +97,17 @@ function calculateSplit() {
         let discountAmount = subtotal * discount;
         let total = subtotal + taxAmount + serviceAmount - discountAmount;
 
-        output += `<h4>${participant}</h4>`;
-        output += "<ul>";
+    document.getElementById("split-results").innerHTML += `
+    <h4>${participant}</h4>
 
-        results[participant].forEach(item => {
-            output += `<li>${item.menu}: Rp ${item.total.toLocaleString()}</li>`;
-        });
-
-        output += `<li>Pajak: Rp ${taxAmount.toLocaleString()}</li>`;
-        output += `<li>Biaya Layanan: Rp ${serviceAmount.toLocaleString()}</li>`;
-        output += `<li>Diskon: Rp ${discountAmount.toLocaleString()}</li>`;
-        output += `<li><b>Total: Rp ${total.toLocaleString()}</b></li>`;
-        output += "</ul>";
-    }
-
-    document.getElementById("split-results").innerHTML = output;
+    <ul>
+        ${results[participant].map(item => `<li>${item.menu}: Rp ${item.total.toLocaleString()}</li>`).join('')}
+        <li>Pajak: Rp ${taxAmount.toLocaleString()}</li>
+        <li>Biaya Layanan: Rp ${serviceAmount.toLocaleString()}</li>
+        <li>Diskon: Rp ${discountAmount.toLocaleString()}</li>
+        <li><b>Total: Rp ${total.toLocaleString()}</b></li>
+    </ul>
+`;}
 }
 
 function printReceipt() {
